@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+}
+
+.h-profile {
+    height: 424px;
+}
+
+p {
+    font-family: 'Montserrat';
+  }
