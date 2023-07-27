@@ -12,4 +12,13 @@ body {
 
 p {
     font-family: 'Montserrat';
+    color: rgb(236 254 255);
   }
+
+  .atas{
+    padding-bottom: 40px;
+  }
+
+.weight-full{
+  weight: 100%;
+}
