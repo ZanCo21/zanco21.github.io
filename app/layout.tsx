@@ -1,4 +1,4 @@
-import './globals.css'
+// import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -19,15 +19,18 @@ export default function RootLayout({
   return (
     <html lang="en">
         <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-MJQkNp9Gs+RO7mVCdTrA8H3NXtjEldRqC/DnX4HT2xUg5h4eNZg9klcr3k9tYyBtyZT11zXLCM1tDEs4chTfA==" crossOrigin="anonymous"/>
-        
           <title>Fauzan Alghifari</title>
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
-
+          <link rel="preconnect" href="https://fonts.gstatic.com"/>
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+          <script src="/js/jquery.min.js" />
+          <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossOrigin="anonymous"></script>
         </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <script type='module' src="js/data.js"></script>
+        <script type='"application/javascript' src="js/main.jsx"></script>
+      </body>
     </html>
   )
 }

@@ -1,5 +1,8 @@
+import './globals.css'
 import React from 'react';
 import Image from 'next/image';
+import ProjectList from '../public/js/main';
+import { projects } from '../public/js/data'; 
 
 export default function Home() {
   return (
@@ -12,8 +15,8 @@ export default function Home() {
             </div>
             <div className='flex-row ps-8 pt-4'>
               <p className='text-cyan-50 font-bold'>Portofolio</p>
-              <p className='text-cyan-50 text-[82px] font-bold my-[-1rem]'>Fauzan Alghifari</p>
-              <p className='text-cyan-50 pt-4 w-9/12 text-justify font-normal'>Fauzan is a web developer with several years of experience in developing functional websites. He is also open to learning new frameworks and technologies. Fauzan is accustomed to working in development teams and possesses strong communication skills.</p>
+              <p className='text-cyan-50 lg:text-[82px] font-bold my-[-1rem] sm:text-[50px]'>Fauzan Alghifari</p>
+              <p className='text-cyan-50 pt-4 w-9/12 text-justify font-normal lg:text-[16px] sm:text-[11px]'>Fauzan is a web developer with several years of experience in developing functional websites. He is also open to learning new frameworks and technologies. Fauzan is accustomed to working in development teams and possesses strong communication skills.</p>
               <div className='flex pt-5 items-center'>
                 <img src="/small-profile.jpg" className='w-[31px] rounded-[14px]' alt="" />
                 <p className='ps-3 text-cyan-50 font-bold'>ZanCo</p>
@@ -35,17 +38,18 @@ export default function Home() {
         </div>
         
         {/* porto */}
-        <div className="container p-2 sm:p-8 ">
-          <div className="flex flex-col">
-            <div className="flex text-left border-b border-gray-500">
-              <div className="opacity-50 px-2 ms-2 py-3 sm:p-3"><p>#</p></div>
-              <div className="opacity-50 flex-initial w-1/3 px-2 py-3 sm:p-3"><p>Title</p></div>
-              <div className="opacity-50 flex-1 px-2 sm:p-3"><p>Short Description</p></div>
-              <div className="opacity-50 flex-initial w-[16%] px-2 py-3 sm:p-3"><p>Date</p></div>
-              <div className=" py-3 sm:p-3 sm:block"><img src="/link-icon.png"/></div>
-            </div>
-            
-            <div className="flex items-center mt-3 cursor-pointer">
+        <div  className="container p-2 sm:p-8 ">
+        <div className="flex flex-col">
+          <div className="flex text-left border-b border-gray-500">
+            <div className="opacity-50 px-2 ms-2 py-3 sm:p-3"><p>#</p></div>
+            <div className="opacity-50 flex-initial w-1/3 px-2 py-3 sm:p-3"><p>Title</p></div>
+            <div className="opacity-50 flex-1 px-2 sm:p-3"><p>Short Description</p></div>
+            <div className="opacity-50 flex-initial w-[16%] px-2 py-3 sm:p-3"><p>Date</p></div>
+            <div className=" py-3 sm:p-3 sm:block"><img src="/link-icon.png"/></div>
+          </div>
+          
+          <div id='all-projects' className='flex-col'>
+          <div className=" items-center mt-3 cursor-pointer hidden">
               <div className="px-2 ms-2 py-3 sm:p-3">
                 <p>1</p>
               </div>
@@ -66,8 +70,11 @@ export default function Home() {
               <img src="/github.png" alt="" />
               </div>
             </div>
-
+          <ProjectList projects={projects} />
           </div>
+
+            
+        </div>
         </div>
       </div>
     </>
