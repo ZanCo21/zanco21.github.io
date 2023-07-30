@@ -9,7 +9,7 @@ const ProjectList = ({ projects }) => {
             <p>{i + 1}</p>
           </div>  
           <div className="flex-initial w-1/3 items-center flex px-2 py-3 sm:p-3">
-            <image src={project.image} alt="" className="w-20 h-10" />
+            <img src={project.image} alt="" className="w-20 h-10" />
             <div className="ps-4">
               <p className="font-bold">{project.title}</p>
               <p className="text-sm opacity-50">ZanCo.</p>
