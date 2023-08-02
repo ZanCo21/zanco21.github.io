@@ -10,6 +10,12 @@ body {
     height: 424px;
 }
 
+@media (max-width: 767px) {
+  #myDesc {
+    display: none;
+  }
+}
+
 p {
     font-family: 'Montserrat';
     color: rgb(236 254 255);
